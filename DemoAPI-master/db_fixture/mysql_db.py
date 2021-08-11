@@ -9,6 +9,7 @@ from pymysql import connect,cursors
 from pymysql.err import OperationalError
 import configparser as cparser
 
+
 # --------- 读取config.ini配置文件 ---------------
 cf = cparser.ConfigParser()
 cf.read(setting.TEST_CONFIG,encoding='UTF-8')
@@ -68,4 +69,5 @@ class DB:
                 self.insert(table, d)
         self.close()
 
-
+    # if __name__ == '__main__':
+    #     insert()

@@ -5,6 +5,9 @@ __author__ = 'YinJia'
 import sys, time, os
 sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 from db_fixture.mysql_db import DB
+import xlrd
+import pymysql
+
 
 # 定义过去时间
 past_time = time.strftime("%Y-%m-%d %H:%M:%S",time.localtime(time.time()-100000))
@@ -28,6 +31,7 @@ datas = {
         {'id':3,'realname':'Jams','phone':13511886603,'email':'tom@mail.com','sign':0,'event_id':5},
     ],
 }
+
 
 # 测试数据插入表
 def init_data():
